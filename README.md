@@ -18,7 +18,7 @@ To use the app, open up the deployed link up in a browser, and click the "get st
 npm run start
 
 ```
-Once a Note Tile and Note Text is entered it can be saved by clicking the save button in the top right corner. The plus sign will clear the unsaved fields and start a new note. Notes in the list on the left side of the page can be deleted by selecting the garbage can icon.
+Once a Note Title and Note Text is entered it can be saved by clicking the save button in the top right corner. The plus sign will clear the unsaved fields and start a new note. Notes in the list on the left side of the page can be deleted by selecting the garbage can icon.
 
 ## LINKS
 
