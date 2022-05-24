@@ -53,7 +53,7 @@ app.post('/api/notes', (req, res) => {
     const newNote = {
       title,
       text,
-      note_id: uuidv4(),
+      id: uuidv4(),
     };
 
     readAndAppend(newNote, './db/db.json');
@@ -65,13 +65,13 @@ app.post('/api/notes', (req, res) => {
 
 
 // DELETE Route for a specific note
-app.delete('/api/:note_id', (req, res) => {
-  const noteId = req.params.note_id;
+app.delete('/api/notes/:id', (req, res) => {
+  const noteId = req.params.id;
   readFromFile('./db/db.json')
     .then((data) => JSON.parse(data))
     .then((json) => {
       // Make a new array of all notes except the one with the ID provided in the URL
-      const result = json.filter((note) => note.note_id !== noteId);
+      const result = json.filter((note) => note.id !== noteId);
 
       // Save that array to the filesystem
       writeToFile('./db/db.json', result);
